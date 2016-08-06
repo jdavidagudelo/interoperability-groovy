@@ -9,6 +9,11 @@ import ca.uhn.hl7v2.model.v25.segment.MSA
 import ca.uhn.hl7v2.model.Message
 
 class HAPIParser{
+
+    /**
+     * Crea un mensaje en ADT_A01 para ser enviado por un cliente.
+     * @return String con un mensaje ADT_A01.
+     */
     static String createMessage(){
         ADT_A01 adt = new ADT_A01()
         adt.initQuickstart("ADT", "A01", "P")
@@ -25,6 +30,11 @@ class HAPIParser{
         return encodedMessage.normalize()
     }
 
+    /**
+     * Retorna el objecto asociado al mensaje String especificado.
+     * @param encodedMessage
+     * @return
+     */
     static Message decodeMessage(String encodedMessage){
         HapiContext context = new DefaultHapiContext()
         Parser parser = context.getPipeParser()

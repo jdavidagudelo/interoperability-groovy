@@ -2,11 +2,8 @@ import Utils
 import HAPIParser
 import ca.uhn.hl7v2.model.v25.message.ADT_A01;
 import ca.uhn.hl7v2.model.v25.segment.PID;
-import ca.uhn.hl7v2.model.v25.segment.MSH;
 
 class ServerThread extends Thread{
-
-    int messagesPerRequest = 1
     Socket socket = null
 	ServerThread(Socket socket){
         this.socket = socket
