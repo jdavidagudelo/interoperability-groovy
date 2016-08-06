@@ -1,0 +1,2 @@
+Main-class: Server
+Class-path: jar/groovy-all-2.4.7.jar
