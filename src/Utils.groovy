@@ -13,6 +13,7 @@ class Utils{
     static String getCompleteMessage(messages){
         StringBuilder sb = new StringBuilder()
         for(String message in messages){
+            message = message.replace("\n", "\r")
             message = getStandardMessage(message)
             sb.append(message)
         }
